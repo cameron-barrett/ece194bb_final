@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="cpm_rst_clk_wiz_100M_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_rst_clk_wiz_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_jtag_axi_0_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_jtag_axi_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_axi_gpio_0_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_axi_gpio_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_axi_gpio_1_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_axi_gpio_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_axi_bram_ctrl_0_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_axi_bram_ctrl_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_blk_mem_gen_0_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_blk_mem_gen_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_clk_wiz_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_smartconnect_0_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_smartconnect_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_reset_inv_0_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_reset_inv_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="cpm_ila_0_0_synth_1" LaunchDir="/home/cameronbarrett/ece194bb/project/final.runs/cpm_ila_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

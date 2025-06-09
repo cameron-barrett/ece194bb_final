@@ -1,0 +1,4 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+WARNING: 0ns : none of the conditions were true for unique case from File:/fs/student/tschlunk/ece152b/final/project/final.srcs/sources_1/new/fsm.sv:119
+WARNING: 0ns : none of the conditions were true for unique case from File:/fs/student/tschlunk/ece152b/final/project/final.srcs/sources_1/new/rom.sv:43

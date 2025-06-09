@@ -1,0 +1,409 @@
+
+*** Running vivado
+    with args -log top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+
+
+****** Vivado v2022.1 (64-bit)
+  **** SW Build 3526262 on Mon Apr 18 15:47:01 MDT 2022
+  **** IP Build 3524634 on Mon Apr 18 20:55:01 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source top.tcl -notrace
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3106.055 ; gain = 2.016 ; free physical = 3998 ; free virtual = 20124
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/ece/Xilinx/Vivado/2022.1/data/ip'.
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1407514
+WARNING: [Synth 8-9501] generate block is allowed only inside loop and conditional generate in SystemVerilog mode [/ece/Xilinx/Vivado/2022.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:4023]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3110.227 ; gain = 0.000 ; free physical = 2028 ; free virtual = 18157
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/top.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'cpm_wrapper' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/hdl/cpm_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'cpm' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:12]
+INFO: [Synth 8-6157] synthesizing module 'cpm_axi_bram_ctrl_0_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_axi_bram_ctrl_0_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_axi_bram_ctrl_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpm_blk_mem_gen_0_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_blk_mem_gen_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_blk_mem_gen_0_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_blk_mem_gen_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'cpm_blk_mem_gen_0_0' is unconnected for instance 'axi_bram_ctrl_0_bram' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:220]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'cpm_blk_mem_gen_0_0' is unconnected for instance 'axi_bram_ctrl_0_bram' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:220]
+WARNING: [Synth 8-7023] instance 'axi_bram_ctrl_0_bram' of module 'cpm_blk_mem_gen_0_0' has 16 connections declared, but only 14 given [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:220]
+INFO: [Synth 8-6157] synthesizing module 'cpm_axi_gpio_0_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_axi_gpio_0_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpm_axi_gpio_1_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_axi_gpio_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_axi_gpio_1_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_axi_gpio_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpm_smartconnect_0_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_smartconnect_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_smartconnect_0_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_smartconnect_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'M01_AXI_awprot' of module 'cpm_smartconnect_0_0' is unconnected for instance 'axi_smc' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:279]
+WARNING: [Synth 8-7071] port 'M01_AXI_arprot' of module 'cpm_smartconnect_0_0' is unconnected for instance 'axi_smc' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:279]
+WARNING: [Synth 8-7071] port 'M02_AXI_awprot' of module 'cpm_smartconnect_0_0' is unconnected for instance 'axi_smc' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:279]
+WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'cpm_smartconnect_0_0' is unconnected for instance 'axi_smc' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:279]
+WARNING: [Synth 8-7023] instance 'axi_smc' of module 'cpm_smartconnect_0_0' has 78 connections declared, but only 74 given [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:279]
+INFO: [Synth 8-6157] synthesizing module 'cpm_clk_wiz_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_clk_wiz_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_clk_wiz_0_stub.v:5]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:360]
+INFO: [Synth 8-6157] synthesizing module 'cpm_ila_0_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_ila_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_ila_0_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_ila_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpm_jtag_axi_0_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_jtag_axi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_jtag_axi_0_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_jtag_axi_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpm_reset_inv_0_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_reset_inv_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_reset_inv_0_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_reset_inv_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cpm_rst_clk_wiz_100M_0' [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_rst_clk_wiz_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_rst_clk_wiz_100M_0' (0#1) [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/.Xil/Vivado-1406496-xilinxlab08/realtime/cpm_rst_clk_wiz_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'cpm_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:396]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'cpm_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:396]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'cpm_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:396]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'cpm_rst_clk_wiz_100M_0' is unconnected for instance 'rst_clk_wiz_100M' [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:396]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_100M' of module 'cpm_rst_clk_wiz_100M_0' has 10 connections declared, but only 6 given [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:396]
+INFO: [Synth 8-6155] done synthesizing module 'cpm' (0#1) [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'cpm_wrapper' (0#1) [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/hdl/cpm_wrapper.v:12]
+WARNING: [Synth 8-7071] port 'BRAM_PORT_RD_din' of module 'cpm_wrapper' is unconnected for instance 'cpm' [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/top.sv:45]
+WARNING: [Synth 8-7071] port 'BRAM_PORT_RD_we' of module 'cpm_wrapper' is unconnected for instance 'cpm' [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/top.sv:45]
+WARNING: [Synth 8-7023] instance 'cpm' of module 'cpm_wrapper' has 23 connections declared, but only 21 given [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/top.sv:45]
+INFO: [Synth 8-6157] synthesizing module 'fsm' [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:23]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:119]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:135]
+INFO: [Synth 8-6155] done synthesizing module 'fsm' (0#1) [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/top.sv:23]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'ila_0'. This will prevent further optimization [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/synth/cpm.v:360]
+WARNING: [Synth 8-6014] Unused sequential element opcode_q_reg was removed.  [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:102]
+WARNING: [Synth 8-7137] Register offset_q_reg in module fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:103]
+WARNING: [Synth 8-7137] Register mult_q_reg in module fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:104]
+WARNING: [Synth 8-7137] Register data_q_reg in module fsm has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/cameronbarrett/ece194bb/project/final.srcs/sources_1/new/fsm.sv:105]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3110.227 ; gain = 0.000 ; free physical = 3106 ; free virtual = 19236
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3125.020 ; gain = 14.793 ; free physical = 3105 ; free virtual = 19235
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3125.020 ; gain = 14.793 ; free physical = 3105 ; free virtual = 19235
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3125.020 ; gain = 0.000 ; free physical = 3098 ; free virtual = 19227
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_rst_clk_wiz_100M_0/cpm_rst_clk_wiz_100M_0/cpm_rst_clk_wiz_100M_0_in_context.xdc] for cell 'cpm/cpm_i/rst_clk_wiz_100M'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_rst_clk_wiz_100M_0/cpm_rst_clk_wiz_100M_0/cpm_rst_clk_wiz_100M_0_in_context.xdc] for cell 'cpm/cpm_i/rst_clk_wiz_100M'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_axi_bram_ctrl_0_0/cpm_axi_bram_ctrl_0_0/cpm_axi_bram_ctrl_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_bram_ctrl_0'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_axi_bram_ctrl_0_0/cpm_axi_bram_ctrl_0_0/cpm_axi_bram_ctrl_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_bram_ctrl_0'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_axi_gpio_0_0/cpm_axi_gpio_0_0/cpm_axi_gpio_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_gpio_0'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_axi_gpio_0_0/cpm_axi_gpio_0_0/cpm_axi_gpio_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_gpio_0'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_axi_gpio_1_0/cpm_axi_gpio_1_0/cpm_axi_gpio_1_0_in_context.xdc] for cell 'cpm/cpm_i/axi_gpio_1'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_axi_gpio_1_0/cpm_axi_gpio_1_0/cpm_axi_gpio_1_0_in_context.xdc] for cell 'cpm/cpm_i/axi_gpio_1'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_blk_mem_gen_0_0/cpm_blk_mem_gen_0_0/cpm_blk_mem_gen_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_bram_ctrl_0_bram'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_blk_mem_gen_0_0/cpm_blk_mem_gen_0_0/cpm_blk_mem_gen_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_bram_ctrl_0_bram'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_clk_wiz_0/cpm_clk_wiz_0/cpm_clk_wiz_0_in_context.xdc] for cell 'cpm/cpm_i/clk_wiz'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_clk_wiz_0/cpm_clk_wiz_0/cpm_clk_wiz_0_in_context.xdc] for cell 'cpm/cpm_i/clk_wiz'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_ila_0_0/cpm_ila_0_0/cpm_ila_0_0_in_context.xdc] for cell 'cpm/cpm_i/ila_0'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_ila_0_0/cpm_ila_0_0/cpm_ila_0_0_in_context.xdc] for cell 'cpm/cpm_i/ila_0'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_jtag_axi_0_0/cpm_jtag_axi_0_0/cpm_jtag_axi_0_0_in_context.xdc] for cell 'cpm/cpm_i/jtag_axi_0'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_jtag_axi_0_0/cpm_jtag_axi_0_0/cpm_jtag_axi_0_0_in_context.xdc] for cell 'cpm/cpm_i/jtag_axi_0'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_reset_inv_0_0/cpm_reset_inv_0_0/cpm_reset_inv_0_0_in_context.xdc] for cell 'cpm/cpm_i/reset_inv_0'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_reset_inv_0_0/cpm_reset_inv_0_0/cpm_reset_inv_0_0_in_context.xdc] for cell 'cpm/cpm_i/reset_inv_0'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_smartconnect_0_0/cpm_smartconnect_0_0/cpm_smartconnect_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_smc'
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_smartconnect_0_0/cpm_smartconnect_0_0/cpm_smartconnect_0_0_in_context.xdc] for cell 'cpm/cpm_i/axi_smc'
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cameronbarrett/ece194bb/project/final.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [/home/cameronbarrett/ece194bb/project/final.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3242.754 ; gain = 0.000 ; free physical = 2951 ; free virtual = 19082
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3242.754 ; gain = 0.000 ; free physical = 2951 ; free virtual = 19082
+WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'cpm/cpm_i/axi_bram_ctrl_0_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 3046 ; free virtual = 19204
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 3046 ; free virtual = 19204
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk_top. (constraint file  /home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_clk_wiz_0/cpm_clk_wiz_0/cpm_clk_wiz_0_in_context.xdc, line 4).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk_top. (constraint file  /home/cameronbarrett/ece194bb/project/final.gen/sources_1/bd/cpm/ip/cpm_clk_wiz_0/cpm_clk_wiz_0/cpm_clk_wiz_0_in_context.xdc, line 5).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/rst_clk_wiz_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/axi_gpio_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/axi_gpio_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/axi_bram_ctrl_0_bram. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/jtag_axi_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/reset_inv_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cpm/cpm_i/axi_smc. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 3045 ; free virtual = 19203
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'fsm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    IDLE |                               00 |                               00
+                 MEMREAD |                               01 |                               01
+                 EXECUTE |                               10 |                               10
+                    DONE |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'fsm'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 3038 ; free virtual = 19197
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
++---Multipliers : 
+	               8x32  Multipliers := 1     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP fsm/GPIO_RD_d0, operation Mode is: A*B.
+DSP Report: operator fsm/GPIO_RD_d0 is absorbed into DSP fsm/GPIO_RD_d0.
+DSP Report: operator fsm/GPIO_RD_d0 is absorbed into DSP fsm/GPIO_RD_d0.
+DSP Report: Generating DSP fsm/GPIO_RD_d0, operation Mode is: (PCIN>>17)+A*B.
+DSP Report: operator fsm/GPIO_RD_d0 is absorbed into DSP fsm/GPIO_RD_d0.
+DSP Report: operator fsm/GPIO_RD_d0 is absorbed into DSP fsm/GPIO_RD_d0.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 3027 ; free virtual = 19190
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|top         | A*B            | 18     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|top         | (PCIN>>17)+A*B | 16     | 9      | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2878 ; free virtual = 19041
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2874 ; free virtual = 19037
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2870 ; free virtual = 19033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[31] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[30] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[29] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[28] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[27] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[26] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[25] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[24] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[23] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[22] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[21] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[20] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[19] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[18] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[17] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[16] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[15] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[14] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[13] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[12] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[11] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[10] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[9] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[8] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[7] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[6] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[5] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[4] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_din[0] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_we[3] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_we[2] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_we[1] to constant 0
+WARNING: [Synth 8-3295] tying undriven pin cpm/cpm_i:BRAM_PORT_RD_we[0] to constant 0
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2870 ; free virtual = 19033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2870 ; free virtual = 19033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2870 ; free virtual = 19033
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2871 ; free virtual = 19034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2871 ; free virtual = 19034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2871 ; free virtual = 19034
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|top         | A'*B''          | 17     | 8      | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|top         | PCIN>>17+A'*B'' | 15     | 8      | -      | -      | 48     | 1    | 2    | -    | -    | -     | 0    | 0    | 
++------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+-----------------------+----------+
+|      |BlackBox name          |Instances |
++------+-----------------------+----------+
+|1     |cpm_axi_bram_ctrl_0_0  |         1|
+|2     |cpm_blk_mem_gen_0_0    |         1|
+|3     |cpm_axi_gpio_0_0       |         1|
+|4     |cpm_axi_gpio_1_0       |         1|
+|5     |cpm_smartconnect_0_0   |         1|
+|6     |cpm_clk_wiz_0          |         1|
+|7     |cpm_ila_0_0            |         1|
+|8     |cpm_jtag_axi_0_0       |         1|
+|9     |cpm_reset_inv_0_0      |         1|
+|10    |cpm_rst_clk_wiz_100M_0 |         1|
++------+-----------------------+----------+
+
+Report Cell Usage: 
++------+---------------------+------+
+|      |Cell                 |Count |
++------+---------------------+------+
+|1     |cpm_axi_bram_ctrl_0  |     1|
+|2     |cpm_axi_gpio_0       |     1|
+|3     |cpm_axi_gpio_1       |     1|
+|4     |cpm_blk_mem_gen_0    |     1|
+|5     |cpm_clk_wiz          |     1|
+|6     |cpm_ila_0            |     1|
+|7     |cpm_jtag_axi_0       |     1|
+|8     |cpm_reset_inv_0      |     1|
+|9     |cpm_rst_clk_wiz_100M |     1|
+|10    |cpm_smartconnect_0   |     1|
+|11    |CARRY4               |     8|
+|12    |DSP48E1              |     2|
+|13    |LUT1                 |     1|
+|14    |LUT2                 |     8|
+|15    |LUT3                 |     5|
+|16    |LUT4                 |    33|
+|17    |LUT5                 |    32|
+|18    |FDCE                 |    34|
+|19    |FDRE                 |    76|
+|20    |IBUF                 |     1|
++------+---------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.754 ; gain = 132.527 ; free physical = 2871 ; free virtual = 19034
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 37 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 3242.754 ; gain = 14.793 ; free physical = 2928 ; free virtual = 19091
+Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 3242.762 ; gain = 132.527 ; free physical = 2928 ; free virtual = 19091
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:05 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3242.762 ; gain = 0.000 ; free physical = 3025 ; free virtual = 19188
+INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3242.762 ; gain = 0.000 ; free physical = 2968 ; free virtual = 19131
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: fb847fdf
+INFO: [Common 17-83] Releasing license: Synthesis
+51 Infos, 60 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 3242.762 ; gain = 136.707 ; free physical = 3058 ; free virtual = 19221
+INFO: [Common 17-1381] The checkpoint '/home/cameronbarrett/ece194bb/project/final.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jun  7 22:08:17 2025...

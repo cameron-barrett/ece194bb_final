@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../final.srcs/sources_1/bd/cpm/ipshared/c923" --include "../../../../final.srcs/sources_1/bd/cpm/ipshared/1ddd/hdl/verilog" --include "../../../../final.srcs/sources_1/bd/cpm/ipshared/b2d0/hdl/verilog" --include "/ece/Xilinx/Vivado/2019.1/data/xilinx_vip/include" \
+"../../../../final.srcs/sources_1/new/fsm.sv" \
+"../../../../final.srcs/sources_1/new/rom.sv" \
+"../../../../final.srcs/sources_1/new/tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
